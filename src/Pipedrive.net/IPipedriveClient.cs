@@ -44,5 +44,7 @@ namespace Pipedrive
         IUsersClient User { get; }
 
         IWebhooksClient Webhook { get; }
+
+        ILeadsClient Lead { get; }
     }
 }

@@ -68,6 +68,7 @@ namespace Pipedrive
             Stage = new StagesClient(apiConnection);
             User = new UsersClient(apiConnection);
             Webhook = new WebhooksClient(apiConnection);
+            Lead = new LeadsClient(apiConnection);
         }
 
         /// <summary>
@@ -271,6 +272,14 @@ namespace Pipedrive
         /// Refer to the API documentation for more information: https://developers.pipedrive.com/docs/api/v1/#!/Webhooks
         /// </remarks>
         public IWebhooksClient Webhook { get; private set; }
+
+        /// <summary>
+        /// Access Pipedrive's Lead API.
+        /// </summary>
+        /// <remarks>
+        /// Refer to the API documentation for more information: https://developers.pipedrive.com/docs/api/v1/#!/Leads
+        /// </remarks>
+        public ILeadsClient Lead { get; private set; }
 
         static Uri FixUpBaseUri(Uri uri)
         {
