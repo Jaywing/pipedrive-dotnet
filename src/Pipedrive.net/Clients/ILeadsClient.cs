@@ -7,10 +7,6 @@ namespace Pipedrive.Clients
 {
     public interface ILeadsClient
     {
-        Task<IReadOnlyList<Lead>> GetAll(DealFilters filters);
-
         Task<Lead> Create(NewLead data);
     }
-
-
 }

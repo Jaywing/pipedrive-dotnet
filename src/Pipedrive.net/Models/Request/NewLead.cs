@@ -16,7 +16,7 @@ namespace Pipedrive
         [JsonProperty("person_id")]
         public long? PersonId { get; set; }
 
-        [JsonProperty("org_id")]
+        [JsonProperty("organization_id")]
         public long? OrgId { get; set; }
     }
 }

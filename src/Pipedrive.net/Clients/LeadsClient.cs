@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using Pipedrive.Clients;
+using Pipedrive.Helpers;
 
 namespace Pipedrive
 {
@@ -17,14 +18,11 @@ namespace Pipedrive
         {
         }
 
-        public Task<IReadOnlyList<Lead>> GetAll(DealFilters filters)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public Task<Lead> Create(NewLead data)
         {
-            throw new System.NotImplementedException();
+            Ensure.ArgumentNotNull(data, nameof(data));
+
+            return ApiConnection.Post<Lead>(ApiUrls.Leads(), data);
         }
     }
 }

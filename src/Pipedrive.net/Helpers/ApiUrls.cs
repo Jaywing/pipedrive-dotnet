@@ -41,6 +41,8 @@ namespace Pipedrive
 
         static readonly Uri _webhooksUrl = new Uri("webhooks", UriKind.Relative);
 
+        static readonly Uri _leadsUrl = new Uri("leads", UriKind.Relative);
+
         /// <summary>
         /// Returns the <see cref="Uri"/> that returns all of the activities.
         /// </summary>
@@ -657,6 +659,15 @@ namespace Pipedrive
         public static Uri OAuthRevokeToken()
         {
             return new Uri("oauth/revoke", UriKind.Relative);
+        }
+
+        /// <summary>
+        /// Returns the <see cref="Uri"/> that returns all of the leads in response to a GET request.
+        /// </summary>
+        /// <returns></returns>
+        public static Uri Leads()
+        {
+            return _leadsUrl;
         }
     }
 }
